@@ -20,8 +20,9 @@ ul {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .body {
@@ -77,12 +78,13 @@ ul {
 
 .questions__level {
     display: flex;
+    justify-content: space-between;
     column-gap: 20px;
     align-items: center;
-    align-self: center;
 }
 
 .questions__level-title {
+    max-width: 300px;
     text-align: left;
 }
 
@@ -91,6 +93,7 @@ ul {
     flex-wrap: wrap;
     gap: 5px;
     width: 200px;
+    padding: 10px;
 }
 
 .questions__item {
@@ -100,6 +103,7 @@ ul {
     width: 30px;
     height: 30px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .questions__item:hover {
