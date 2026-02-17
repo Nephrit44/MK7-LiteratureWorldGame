@@ -4,16 +4,35 @@ const questions = document.querySelector('.questions');
 const questions__itemsLVL1 = document.querySelector('.questions__items-lvl1');
 const questions__itemsLVL2 = document.querySelector('.questions__items-lvl2');
 
+const modalAnswer = document.querySelector('.modalAnswer');
+
+const modalAnswer__closeBtn = document.querySelector('.modalAnswer__closeBtn');
+const modalQuestion = document.querySelector('.modalQuestion');
+
+const modal__list = document.querySelector('.modal__list');
 
 header__button.addEventListener('click', function () {
     header.classList.toggle('visible');
     questions.classList.toggle('visible');
 });
 
+//Функция закрытия модальных окон
+function closeModal(modalWindow) {
+    modalWindow.classList.toggle('visible');
+}
+
+//Закрыть окно с вопросом
+modalAnswer__closeBtn.addEventListener('click', function () {
+    closeModal(modalAnswer);
+    closeModal(modalQuestion);
+});
+
+
 //Загрузка списка вопросов № 1
 loadQuestions(arrColletion, questions__itemsLVL1, 1);
 loadQuestions(arrColletion, questions__itemsLVL2, 2);
 
+//Функция вывода списка вопросов в виде квадратов
 function loadQuestions(arrColletion, htmlElement, database) {
     arrColletion.forEach(element => {
         if (element.questions__db == database) {
@@ -27,18 +46,53 @@ function loadQuestions(arrColletion, htmlElement, database) {
     });
 }
 
+//Слушатель нажатия на элементы отображаемые на экране
 document.addEventListener('click', function (e) {
+    //Обработка вызова вопроса
     if (e.target.classList.contains('questions__item')) {
+        e.target.classList.add('visible');
         readQuestions(e.target.getAttribute('db'), e.target.getAttribute('qID'));
+    };
+    //Обработка нажатия на правильный ответ
+    if(e.target.hasAttribute('answercorrect')){
+        showCorrectAnswer(e.target.getAttribute('qid'), e.target.getAttribute('answercorrect'));
+    }
+    //Обработка нажатия на не правльный ответ
+    if(e.target.classList.contains('modalQuestion__item') && e.target.hasAttribute('answercorrect') == false){
+        showCorrectAnswer("fail", "Промах");
     }
 })
 
 
+//Функция вывод правильного ответа
+function showCorrectAnswer(IMG, textContent){
+    modalAnswer.querySelector('.modalAnswer__img').src = `../images/lvl1/${IMG}.webp`;
+    modalAnswer.querySelector('.modalAnswer_title').textContent = textContent;
+    modalAnswer.classList.toggle('visible');
+}
+
+//Функция проверки, что нажата именно кнопка с вопросом
 function readQuestions(dataBase, redID) {
 
     arrColletion.forEach(element => {
-        if (element.questions__db == dataBase && element.questions == redID){
-            console.log(element)
+        if (element.questions__db == dataBase && element.questions == redID) {
+            modalQuestion.classList.toggle('visible');
+            modalQuestion.querySelector('.modalQuestion__subtitle').textContent = `Вопрос: ${element.questions}`;
+            modalQuestion.querySelector('.modalQuestion_title').textContent = element.questions__text;
+            modalQuestion.querySelector('.modalQuestion__item1').textContent = element.questions__answer1;
+            modalQuestion.querySelector('.modalQuestion__item2').textContent = element.questions__answer2;
+            modalQuestion.querySelector('.modalQuestion__item3').textContent = element.questions__answerCorrect;
+            modalQuestion.querySelector('.modalQuestion__item3').setAttribute('answerCorrect', element.questions__nonte)
+            modalQuestion.querySelector('.modalQuestion__item3').setAttribute('qid', element.questions)
         }
     });
+    randomizer();
+}
+
+//Функция перемешивания ответов
+function randomizer() {
+    
+    for (let i = modal__list.children.length; i >= 0; i--) {
+        modal__list.appendChild(modal__list.children[Math.random() * i | 0]);
+    }
 }

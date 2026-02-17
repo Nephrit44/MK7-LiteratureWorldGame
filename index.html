@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Мир литерутры - игра</title>
 </head>
@@ -40,6 +44,23 @@
             </div>
         </div>
     </section>
+
+    <div class="modal modalAnswer visible">
+        <button class="modal__btn modalAnswer__closeBtn" type="button">закрыть</button>
+        <img class="modal__img modalAnswer__img" src="./images/lvl1/01_Goncharov.webp" alt="">
+        <h3 class="modal__title modalAnswer_title">Чайковский</h3>
+    </div>
+
+    <div class="modal modalQuestion visible">
+        <p class="modal__contetx modalQuestion__subtitle"></p>
+        <h3 class="modal__title modalQuestion_title"></h3>
+        <ul class="modal__list">
+            <li class="modalQuestion__item modalQuestion__item1"></li>
+            <li class="modalQuestion__item modalQuestion__item2"></li>
+            <li class="modalQuestion__item modalQuestion__item3"></li>
+        </ul>
+    </div>
+
     <script src="./js/QLV1.js"></script>
     <script src="./js/main.js"></script>
 </body>

@@ -7,7 +7,7 @@ const arrColletion = [
         questions__answer2: "Толстой Л.Н.",
         questions__answerCorrect: "Гончаров И.А.",
         questions__img: "01_Goncharov.webp",
-        uestions__nonte: "Гончаров Иван Александрович",
+        questions__nonte: "Гончаров Иван Александрович",
     },
     {
         questions: 2,
@@ -17,7 +17,7 @@ const arrColletion = [
         questions__answer2: "Некрасов Н.А.",
         questions__answerCorrect: "Островский А.Н.",
         questions__img: "02_Ostrivsky.webp",
-        uestions__nonte: "Островский Александр Николаевич",
+        questions__nonte: "Островский Александр Николаевич",
     },
     {
         questions: 3,
@@ -27,7 +27,7 @@ const arrColletion = [
         questions__answer2: "Гончаров И.А.",
         questions__answerCorrect: "Тургенев И.С.",
         questions__img: "",
-        uestions__nonte: "Тургенев Иван Сергеевич и Полина Виардо",
+        questions__nonte: "Тургенев Иван Сергеевич и Полина Виардо",
     },
     {
         questions: 4,
@@ -37,7 +37,7 @@ const arrColletion = [
         questions__answer2: "Некрасов Н.А.",
         questions__answerCorrect: "Фет А.А.",
         questions__img: "",
-        uestions__nonte: "Фет Афанасий Афанасьевич",
+        questions__nonte: "Фет Афанасий Афанасьевич",
     },
     {
         questions: 5,
@@ -47,7 +47,7 @@ const arrColletion = [
         questions__answer2: "Толстой Л.Н.",
         questions__answerCorrect: "Салтыков-Щедрин М.Е.",
         questions__img: "05_Shedrin.webp",
-        uestions__nonte: "Фет Афанасий Афанасьевич",
+        questions__nonte: "Фет Афанасий Афанасьевич",
     },
     {
         questions: 6,
@@ -57,7 +57,7 @@ const arrColletion = [
         questions__answer2: "Тютчев Ф.И.",
         questions__answerCorrect: "Некрасов Н.А.",
         questions__img: "Nekrasov.webp",
-        uestions__nonte: "Николай Алексеевич Некрасов",
+        questions__nonte: "Николай Алексеевич Некрасов",
     },
     {
         questions: 7,
@@ -67,7 +67,7 @@ const arrColletion = [
         questions__answer2: "Тургенев И.С.",
         questions__answerCorrect: "Достоевский М.Ф.",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 8,
@@ -77,7 +77,7 @@ const arrColletion = [
         questions__answer2: "Лысые Горы",
         questions__answerCorrect: "Ясная Поляна",
         questions__img: ".webp",
-        uestions__nonte: "Ясная Поляна",
+        questions__nonte: "Ясная Поляна",
     },
     {
         questions: 9,
@@ -87,7 +87,7 @@ const arrColletion = [
         questions__answer2: "«Идиот»",
         questions__answerCorrect: "«Обыкновенная история»",
         questions__img: ".webp",
-        uestions__nonte: "Обыкновенная история",
+        questions__nonte: "Обыкновенная история",
     },
     {
         questions: 10,
@@ -97,7 +97,7 @@ const arrColletion = [
         questions__answer2: "Щедрин",
         questions__answerCorrect: "Салтыков",
         questions__img: ".webp",
-        uestions__nonte: "Салтыков",
+        questions__nonte: "Салтыков",
     },
     {
         questions: 11,
@@ -107,7 +107,7 @@ const arrColletion = [
         questions__answer2: "Тургенев И.С.",
         questions__answerCorrect: "Островский А.Н.",
         questions__img: ".webp",
-        uestions__nonte: "Островский Александр Николаевич",
+        questions__nonte: "Островский Александр Николаевич",
     },
     {
         questions: 12,
@@ -117,7 +117,7 @@ const arrColletion = [
         questions__answer2: "Тютчев Ф.И.",
         questions__answerCorrect: "Некрасов Н.А.",
         questions__img: ".webp",
-        uestions__nonte: "Николай Алексеевич Некрасов",
+        questions__nonte: "Николай Алексеевич Некрасов",
     },
         {
         questions: 13,
@@ -127,7 +127,7 @@ const arrColletion = [
         questions__answer2: "Достоевский Ф.М.",
         questions__answerCorrect: "Толстой Л.Н.",
         questions__img: ".webp",
-        uestions__nonte: "Лев Николаевич Толстой",
+        questions__nonte: "Лев Николаевич Толстой",
     },
         {
         questions: 14,
@@ -137,7 +137,7 @@ const arrColletion = [
         questions__answer2: "Достоевский Ф.М.",
         questions__answerCorrect: "Чехов А.П.",
         questions__img: ".webp",
-        uestions__nonte: "Антон Павлович Чехов",
+        questions__nonte: "Антон Павлович Чехов",
     },
         {
         questions: 15,
@@ -147,7 +147,7 @@ const arrColletion = [
         questions__answer2: "Некрасов Н.А.",
         questions__answerCorrect: "Достоевский Ф.М",
         questions__img: ".webp",
-        uestions__nonte: "Фёдор Михайлович Достоевский",
+        questions__nonte: "Фёдор Михайлович Достоевский",
     },
 
     // ВТОРОЙ ВОПРОС
@@ -159,7 +159,7 @@ const arrColletion = [
         questions__answer2: "Павел Петрович Кирсанов",
         questions__answerCorrect: "Илья Ильич Обломов",
         questions__img: ".webp",
-        uestions__nonte: "Илья Ильич Обломов",
+        questions__nonte: "Илья Ильич Обломов",
     },
     {
         questions: 2,
@@ -169,7 +169,7 @@ const arrColletion = [
         questions__answer2: "Андрей Болконский",
         questions__answerCorrect: "Евгений Базаров",
         questions__img: ".webp",
-        uestions__nonte: "Евгений Базаров",
+        questions__nonte: "Евгений Базаров",
     },
     {
         questions: 3,
@@ -179,7 +179,7 @@ const arrColletion = [
         questions__answer2: "Описание подготовки к убийству",
         questions__answerCorrect: "Описание нравственных последствий преступления",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 4,
@@ -189,7 +189,7 @@ const arrColletion = [
         questions__answer2: "Ольга Сергеевна Ильинская",
         questions__answerCorrect: "Марфа Игнатьевна Кабанова.",
         questions__img: ".webp",
-        uestions__nonte: "Марфа Игнатьевна Кабанова.",
+        questions__nonte: "Марфа Игнатьевна Кабанова.",
     },
     {
         questions: 5,
@@ -199,7 +199,7 @@ const arrColletion = [
         questions__answer2: "Ольга Сергеевна Ильинская",
         questions__answerCorrect: "Екатерина Петровна Кабанова",
         questions__img: ".webp",
-        uestions__nonte: "Екатерина Петровна Кабанова",
+        questions__nonte: "Екатерина Петровна Кабанова",
     },
     {
         questions: 6,
@@ -209,7 +209,7 @@ const arrColletion = [
         questions__answer2: "Николай Андреевич Болконский",
         questions__answerCorrect: "Павел Петрович Кирсанов",
         questions__img: ".webp",
-        uestions__nonte: "Павел Петрович Кирсанов",
+        questions__nonte: "Павел Петрович Кирсанов",
     },
     {
         questions: 7,
@@ -219,7 +219,7 @@ const arrColletion = [
         questions__answer2: "Болконский Н.А.",
         questions__answerCorrect: "Раскольников Р.Р.",
         questions__img: ".webp",
-        uestions__nonte: "Родион Романович Раскольников",
+        questions__nonte: "Родион Романович Раскольников",
     },
     {
         questions: 8,
@@ -229,7 +229,7 @@ const arrColletion = [
         questions__answer2: "Савел Прокофьевич Дикой",
         questions__answerCorrect: "Пьер Кириллович Безухов",
         questions__img: ".webp",
-        uestions__nonte: "Пьер Кириллович Безухов",
+        questions__nonte: "Пьер Кириллович Безухов",
     },
     {
         questions: 9,
@@ -239,7 +239,7 @@ const arrColletion = [
         questions__answer2: "Легкомыслие",
         questions__answerCorrect: "Жертвенность",
         questions__img: ".webp",
-        uestions__nonte: "Жертвенность Сони Мармеладовой",
+        questions__nonte: "Жертвенность Сони Мармеладовой",
     },
     {
         questions: 10,
@@ -249,7 +249,7 @@ const arrColletion = [
         questions__answer2: "«Обломов»",
         questions__answerCorrect: "«Крыжовник»",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 11,
@@ -259,7 +259,7 @@ const arrColletion = [
         questions__answer2: "строгое научное разделение людей на разряды ",
         questions__answerCorrect: "разделение людей на  разряды: материал и собственно люди",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 12,
@@ -269,7 +269,7 @@ const arrColletion = [
         questions__answer2: "",
         questions__answerCorrect: "",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 13,
@@ -279,7 +279,7 @@ const arrColletion = [
         questions__answer2: "",
         questions__answerCorrect: "",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 14,
@@ -289,7 +289,7 @@ const arrColletion = [
         questions__answer2: "",
         questions__answerCorrect: "",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
     {
         questions: 15,
@@ -299,6 +299,6 @@ const arrColletion = [
         questions__answer2: "",
         questions__answerCorrect: "",
         questions__img: ".webp",
-        uestions__nonte: "",
+        questions__nonte: "",
     },
 ]
