@@ -3,6 +3,9 @@ const header__button = document.querySelector('.header__button');
 const questions = document.querySelector('.questions');
 const questions__itemsLVL1 = document.querySelector('.questions__items-lvl1');
 const questions__itemsLVL2 = document.querySelector('.questions__items-lvl2');
+const questions__itemsLVL3 = document.querySelector('.questions__items-lvl3');
+const soundFail = document.querySelector('.soundFail');
+const soundAvation = document.querySelector('.soundAvation');
 
 const modalAnswer = document.querySelector('.modalAnswer');
 
@@ -31,6 +34,7 @@ modalAnswer__closeBtn.addEventListener('click', function () {
 //Загрузка списка вопросов № 1
 loadQuestions(arrColletion, questions__itemsLVL1, 1);
 loadQuestions(arrColletion, questions__itemsLVL2, 2);
+loadQuestions(arrColletion, questions__itemsLVL3, 3);
 
 //Функция вывода списка вопросов в виде квадратов
 function loadQuestions(arrColletion, htmlElement, database) {
@@ -55,20 +59,23 @@ document.addEventListener('click', function (e) {
     };
     //Обработка нажатия на правильный ответ
     if(e.target.hasAttribute('answercorrect')){
-        showCorrectAnswer(e.target.getAttribute('qid'), e.target.getAttribute('answercorrect'));
+        showCorrectAnswer(e.target.getAttribute('lvl'), e.target.getAttribute('qid'), e.target.getAttribute('answercorrect'));
     }
     //Обработка нажатия на не правльный ответ
     if(e.target.classList.contains('modalQuestion__item') && e.target.hasAttribute('answercorrect') == false){
-        showCorrectAnswer("fail", "Промах");
+        console.log(e.target)
+        showCorrectAnswer(e.target.getAttribute('lvl'),"fail", "Промах");
+        soundFail.play();
     }
 })
 
 
 //Функция вывод правильного ответа
-function showCorrectAnswer(IMG, textContent){
-    modalAnswer.querySelector('.modalAnswer__img').src = `../images/lvl1/${IMG}.webp`;
+function showCorrectAnswer(lvl, IMG, textContent){
+    modalAnswer.querySelector('.modalAnswer__img').src = `../images/lvl${lvl}/${IMG}.webp`;
     modalAnswer.querySelector('.modalAnswer_title').textContent = textContent;
     modalAnswer.classList.toggle('visible');
+    soundAvation.play();
 }
 
 //Функция проверки, что нажата именно кнопка с вопросом
@@ -80,10 +87,13 @@ function readQuestions(dataBase, redID) {
             modalQuestion.querySelector('.modalQuestion__subtitle').textContent = `Вопрос: ${element.questions}`;
             modalQuestion.querySelector('.modalQuestion_title').textContent = element.questions__text;
             modalQuestion.querySelector('.modalQuestion__item1').textContent = element.questions__answer1;
+            modalQuestion.querySelector('.modalQuestion__item1').setAttribute('lvl', element.questions__db)
             modalQuestion.querySelector('.modalQuestion__item2').textContent = element.questions__answer2;
+            modalQuestion.querySelector('.modalQuestion__item2').setAttribute('lvl', element.questions__db)
             modalQuestion.querySelector('.modalQuestion__item3').textContent = element.questions__answerCorrect;
             modalQuestion.querySelector('.modalQuestion__item3').setAttribute('answerCorrect', element.questions__nonte)
             modalQuestion.querySelector('.modalQuestion__item3').setAttribute('qid', element.questions)
+            modalQuestion.querySelector('.modalQuestion__item3').setAttribute('lvl', element.questions__db)
         }
     });
     randomizer();
