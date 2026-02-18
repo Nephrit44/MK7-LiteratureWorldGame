@@ -185,6 +185,13 @@ ul {
     transform: translateX(-50%);
 }
 
+#fireworks-canvas{
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+}
+
 .modalQuestion {
     display: flex;
     flex-direction: column;

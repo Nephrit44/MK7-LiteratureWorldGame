@@ -75,7 +75,8 @@ function showCorrectAnswer(lvl, IMG, textContent){
     modalAnswer.querySelector('.modalAnswer__img').src = `../images/lvl${lvl}/${IMG}.webp`;
     modalAnswer.querySelector('.modalAnswer_title').textContent = textContent;
     modalAnswer.classList.toggle('visible');
-    soundAvation.play();
+    soundAvation.play(); //Проигрываем звук
+    startFIreworks(); //Запускаем фейрверк
 }
 
 //Функция проверки, что нажата именно кнопка с вопросом
@@ -105,4 +106,27 @@ function randomizer() {
     for (let i = modal__list.children.length; i >= 0; i--) {
         modal__list.appendChild(modal__list.children[Math.random() * i | 0]);
     }
+}
+
+//Анимация фейерверка
+function startFIreworks(){
+    let firework = JS_FIREWORKS.Fireworks({
+        id : 'fireworks-canvas',
+        hue : 120,
+        particleCount : 50,
+        delay : 0,
+        minDelay : 20,
+        maxDelay : 40,
+        boundaries : { // of respawn and target
+            top: 50,
+            bottom: 240,
+            left: 50,
+            right: 590
+        },
+        fireworkSpeed : 2,
+        fireworkAcceleration : 1.05,
+        particleFriction : .95,
+        particleGravity : 1.5
+    });
+    firework.start();
 }
