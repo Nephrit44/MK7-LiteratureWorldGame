@@ -134,7 +134,7 @@ ul {
     background-color: transparent;
     transition: transform 1s;
     border: 1px solid transparent;
-    color: #4e36a1;
+    color: #ffffff;
     text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
     animation: glow 1.5s infinite alternate;
 }
@@ -158,6 +158,9 @@ ul {
     justify-content: space-between;
     column-gap: 20px;
     align-items: center;
+    background-color: #F0EEE9 ;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .questions__level-title {
@@ -174,18 +177,17 @@ ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 5px;
-    width: 200px;
+    gap: 10px;
     padding: 10px;
     font-size: 24px;
 }
 
 .questions__item {
     display: block;
-    padding: 5px;
-    border: 1px solid #ff0000;
-    width: 40px;
-    height: 40px;
+    padding: 10px;
+    border: 2px solid #478589;
+    width: 50px;
+    height: 50px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -201,21 +203,26 @@ ul {
 
 .modal {
     position: absolute;
-    inset: 0;
+    height: 90%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 100vh;
 }
 
 .modal::before {
     content: "";
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-image: url("../decor/bg.webp");
+    background-color: #F0EEE9;
+    border-radius: 10px;
     z-index: 1;
 }
 
@@ -249,6 +256,7 @@ ul {
 
 .modal__title {
     position: absolute;
+    padding: 0 30px;
     z-index: 2;
 }
 
@@ -272,19 +280,13 @@ ul {
     width: 1000px;
 }
 
-.modalQuestion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .modalQuestion_title {
     font-size: clamp(1.5rem, 0.244rem + 4.675vi, 3.75rem);
 }
 
 .modal__contetx {
     position: absolute;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 700;
     color: #5f5f5f;
     top: 0;
@@ -295,7 +297,7 @@ ul {
 .modal__list {
     position: absolute;
     z-index: 1;
-    bottom: 10px;
+    bottom: 40px;
     display: flex;
     column-gap: 20px;
 }
