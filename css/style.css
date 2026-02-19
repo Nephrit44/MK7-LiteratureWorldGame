@@ -76,7 +76,7 @@ ul {
     height: 100%;
     width: 100%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     top: 0;
     background-image: url("../decor/book.svg");
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@ ul {
     font-family: var(--startFontTitle);
     font-size: clamp(2.688rem, 0.938rem + 8.75vi, 7.5rem);
     text-transform: none;
-    letter-spacing: 30px;
+    letter-spacing: cclamp(0.125rem, -0.511rem + 3.182vi, 1.875rem);
     background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -104,7 +104,7 @@ ul {
 }
 
 .header__subtitle::first-letter {
-    font-size: 200px;
+    font-size: clamp(6.25rem, 3.977rem + 11.364vi, 12.5rem);
 }
 
 .button {
@@ -266,7 +266,7 @@ ul {
 }
 
 .modalQuestion_title {
-    font-size: 60px;
+    font-size: clamp(1.5rem, 0.244rem + 4.675vi, 3.75rem);
 }
 
 .modal__contetx {
@@ -296,11 +296,12 @@ ul {
     border: 1px solid #5f5f5f;
     border-radius: 10px;
     padding: 15px;
-    max-width: 150px;
+    max-width: 200px;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: all .3s;
+    font-size: 30px;
 }
 
 .modalQuestion__item:hover {
@@ -330,5 +331,46 @@ ul {
 
     100% {
         text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+
+@media (width <= 430px) {
+    .body {
+        height: 100svh;
+    }
+
+    .header::before {
+        top: 30%;
+    }
+
+    .questions__level-title {
+        text-align: center;
+    }
+
+    .questions__level {
+        flex-direction: column;
+    }
+
+    .questions__items {
+        width: 100%;   
+    }
+    
+    .questions__item {
+        margin: 0 auto;
+    }
+
+    .modal__list {
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+    .modalQuestion__item {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .videoFail {
+        width: 100%;
     }
 }
