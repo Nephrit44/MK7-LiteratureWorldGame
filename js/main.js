@@ -6,7 +6,8 @@ const questions__itemsLVL2 = document.querySelector('.questions__items-lvl2');
 const questions__itemsLVL3 = document.querySelector('.questions__items-lvl3');
 const soundFail = document.querySelector('.soundFail');
 const soundAvation = document.querySelector('.soundAvation');
-
+const videoFail = document.querySelector('.videoFail');
+const modal__img = document.querySelector('.modal__img');
 const modalAnswer = document.querySelector('.modalAnswer');
 
 const modalAnswer__closeBtn = document.querySelector('.modalAnswer__closeBtn');
@@ -56,7 +57,7 @@ function loadQuestions(arrColletion, htmlElement, database) {
 document.addEventListener('click', function (e) {
     //Обработка вызова вопроса
     if (e.target.classList.contains('questions__item')) {
-        e.target.classList.add('visible');
+        e.target.classList.add('hide');
         readQuestions(e.target.getAttribute('db'), e.target.getAttribute('qID'));
     };
     //Обработка нажатия на правильный ответ
@@ -81,7 +82,9 @@ function showCorrectAnswer(lvl, IMG, textContent, answerSrtatus) {
         startFireworks(true); //Запускаем фейрверк
     } else {
         startFireworks(false); //Запускаем фейрверк
-        soundFail.play();
+        videoFail.classList.toggle('visible');
+        modal__img.style.height = "20%";
+        videoFail.play();
     }
 }
 
@@ -116,7 +119,6 @@ function randomizer() {
 
 //Анимация фейерверка
 function startFireworks(action) {
-    console.log(action)
     if (action == true) {
         firework.start();
         fireworkElement.style.removeProperty('display');
@@ -124,7 +126,6 @@ function startFireworks(action) {
     if (action == false) {
         fireworkElement.style.setProperty('display', 'none');
         firework.stop();
-        console.log(fireworkElement)
     }
 
 }
@@ -147,3 +148,4 @@ let firework = JS_FIREWORKS.Fireworks({
     particleFriction: .95,
     particleGravity: 1.5
 });
+

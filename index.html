@@ -15,8 +15,8 @@
 <body class="body">
 
     <header class="header container">
-        <h1 class="header__title">Интеллектуальная игра</h1>
-        <h2 class="header__subtitle">В МИРЕ ЛИТЕРАТУРЫ</h2>
+        <h1 class="header__title">интеллектуальная игра</h1>
+        <h2 class="header__subtitle">В мире</br> литературы</h2>
         <button class="button header__button">СТАРТ</button>
     </header>
     <section class="questions container visible">
@@ -46,9 +46,12 @@
     </section>
 
     <div class="modal modalAnswer visible">
-        <button class="modal__btn modalAnswer__closeBtn" type="button">закрыть</button>
+        <button class="modal__btn modalAnswer__closeBtn" type="button">
+            <img src="./decor/close.svg" alt="закрыть">
+        </button>
         <img class="modal__img modalAnswer__img" src="" alt="">
         <h3 class="modal__title modalAnswer_title"></h3>
+        <video class="videoFail visible" src="./video/fail.mp4"></video>
         <canvas id="fireworks-canvas"></canvas>
     </div>
 

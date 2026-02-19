@@ -1,10 +1,28 @@
+@font-face {
+    font-family: 'Nautilus';
+    src: url('../font/Nautilus.woff');
+}
+
+@font-face {
+    font-family: 'Radiotechnika';
+    src: url('../font/Radiotechnika.woff');
+}
+
+@font-face {
+    font-family: 'RIVERHACK';
+    src: url('../font/RIVERHACK.woff');
+}
+
 * {
     box-sizing: border-box;
 }
 
 :root {
     --mainFont: "Roboto Condensed", sans-serif;
-    --textShadow: #943131;
+    --decorationFont: Nautilus, sans-serif;
+    --startButtonFont: Radiotechnika, sans-serif;
+    --startFontTitle: RIVERHACK, sans-serif;
+    --textShadow: #611f1f;
 }
 
 h1,
@@ -42,24 +60,51 @@ ul {
 }
 
 .header {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
+    row-gap: 30px;
     text-align: center;
     color: #ff0000;
     height: 100%;
 }
 
+.header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    background-image: url("../decor/book.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+    z-index: -1;
+}
+
 .header__title {
     font-family: var(--mainFont);
-    font-size: 46x;
+    font-size: clamp(1rem, 0.318rem + 3.409vi, 2.875rem);
     text-shadow: 1px 1px 1px #5f5f5f;
+    text-transform: uppercase;
 }
 
 .header__subtitle {
-    font-family: var(--mainFont);
-    font-size: 120px;
-    text-shadow: 2px 2px 2px var(--textShadow);
+    font-family: var(--startFontTitle);
+    font-size: clamp(2.688rem, 0.938rem + 8.75vi, 7.5rem);
+    text-transform: none;
+    letter-spacing: 30px;
+    background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+}
+
+.header__subtitle::first-letter {
+    font-size: 200px;
 }
 
 .button {
@@ -69,11 +114,17 @@ ul {
 
 .header__button {
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 46px;
+    font-weight: 900;
+    font-family: var(--startButtonFont);
+    letter-spacing: 20px;
     padding: 10px;
-    border-radius: 5px;
-    background-color: bisque;
+    background-color: transparent;
     transition: transform 1s;
+    border: 1px solid transparent;
+    color: #4e36a1;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
 }
 
 .header__button:hover {
@@ -81,8 +132,10 @@ ul {
 }
 
 .questions__group {
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     row-gap: 10px;
     max-width: 700px;
     margin: 0 auto;
@@ -98,6 +151,7 @@ ul {
 .questions__level-title {
     font-family: var(--mainFont);
     font-weight: 500;
+    font-size: 32px;
     color: #1f1f1f;
     text-shadow: 1px 1px 1px #b8b8b8;
     max-width: 300px;
@@ -105,19 +159,21 @@ ul {
 }
 
 .questions__items {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 5px;
     width: 200px;
     padding: 10px;
+    font-size: 24px;
 }
 
 .questions__item {
     display: block;
     padding: 5px;
     border: 1px solid #ff0000;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -156,15 +212,26 @@ ul {
     z-index: 2;
     background-size: contain;
     max-height: 80%;
+    align-self: start;
 }
 
 .modal__btn {
     position: absolute;
+    display: flex;
+    justify-content: center;
     z-index: 3;
     right: 0;
     top: 0;
     margin: 10px;
-    font-weight: 100;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: all .4s;
+}
+
+.modal__btn:hover {
+    transform: rotate(180deg);
 }
 
 .modal__title {
@@ -185,7 +252,7 @@ ul {
     transform: translateX(-50%);
 }
 
-#fireworks-canvas{
+#fireworks-canvas {
     position: absolute;
     z-index: 4;
     height: 400px;
@@ -220,6 +287,11 @@ ul {
     column-gap: 20px;
 }
 
+.videoFail {
+    position: absolute;
+    z-index: 2;
+}
+
 .modalQuestion__item {
     border: 1px solid #5f5f5f;
     border-radius: 10px;
@@ -244,4 +316,19 @@ ul {
 
 .visible {
     display: none;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
 }
