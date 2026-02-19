@@ -74,7 +74,7 @@ document.addEventListener('click', function (e) {
 
 //Функция вывод правильного ответа
 function showCorrectAnswer(lvl, IMG, textContent, answerSrtatus) {
-    modalAnswer.querySelector('.modalAnswer__img').src = `../images/lvl${lvl}/${IMG}.webp`;
+    modalAnswer.querySelector('.modalAnswer__img').src = `./images/lvl${lvl}/${IMG}.webp`;
     modalAnswer.querySelector('.modalAnswer_title').textContent = textContent;
     modalAnswer.classList.toggle('visible');
     if (answerSrtatus == true) {
