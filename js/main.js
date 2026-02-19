@@ -13,6 +13,7 @@ const modalAnswer__closeBtn = document.querySelector('.modalAnswer__closeBtn');
 const modalQuestion = document.querySelector('.modalQuestion');
 
 const modal__list = document.querySelector('.modal__list');
+const fireworkElement = document.querySelector('#fireworks-canvas');
 
 header__button.addEventListener('click', function () {
     header.classList.toggle('visible');
@@ -26,6 +27,7 @@ function closeModal(modalWindow) {
 
 //Закрыть окно с вопросом
 modalAnswer__closeBtn.addEventListener('click', function () {
+    startFireworks(false); //тормозим фейрверк
     closeModal(modalAnswer);
     closeModal(modalQuestion);
 });
@@ -58,25 +60,29 @@ document.addEventListener('click', function (e) {
         readQuestions(e.target.getAttribute('db'), e.target.getAttribute('qID'));
     };
     //Обработка нажатия на правильный ответ
-    if(e.target.hasAttribute('answercorrect')){
-        showCorrectAnswer(e.target.getAttribute('lvl'), e.target.getAttribute('qid'), e.target.getAttribute('answercorrect'));
+    if (e.target.hasAttribute('answercorrect')) {
+        showCorrectAnswer(e.target.getAttribute('lvl'), e.target.getAttribute('qid'), e.target.getAttribute('answercorrect'), true);
     }
     //Обработка нажатия на не правльный ответ
-    if(e.target.classList.contains('modalQuestion__item') && e.target.hasAttribute('answercorrect') == false){
-        console.log(e.target)
-        showCorrectAnswer(e.target.getAttribute('lvl'),"fail", "Промах");
-        soundFail.play();
+    if (e.target.classList.contains('modalQuestion__item') && e.target.hasAttribute('answercorrect') == false) {
+        showCorrectAnswer(e.target.getAttribute('lvl'), "fail", "Промах", false);
+
     }
 })
 
 
 //Функция вывод правильного ответа
-function showCorrectAnswer(lvl, IMG, textContent){
+function showCorrectAnswer(lvl, IMG, textContent, answerSrtatus) {
     modalAnswer.querySelector('.modalAnswer__img').src = `../images/lvl${lvl}/${IMG}.webp`;
     modalAnswer.querySelector('.modalAnswer_title').textContent = textContent;
     modalAnswer.classList.toggle('visible');
-    soundAvation.play(); //Проигрываем звук
-    startFIreworks(); //Запускаем фейрверк
+    if (answerSrtatus == true) {
+        soundAvation.play(); //Проигрываем звук
+        startFireworks(true); //Запускаем фейрверк
+    } else {
+        startFireworks(false); //Запускаем фейрверк
+        soundFail.play();
+    }
 }
 
 //Функция проверки, что нажата именно кнопка с вопросом
@@ -102,31 +108,42 @@ function readQuestions(dataBase, redID) {
 
 //Функция перемешивания ответов
 function randomizer() {
-    
+
     for (let i = modal__list.children.length; i >= 0; i--) {
         modal__list.appendChild(modal__list.children[Math.random() * i | 0]);
     }
 }
 
 //Анимация фейерверка
-function startFIreworks(){
-    let firework = JS_FIREWORKS.Fireworks({
-        id : 'fireworks-canvas',
-        hue : 120,
-        particleCount : 50,
-        delay : 0,
-        minDelay : 20,
-        maxDelay : 40,
-        boundaries : { // of respawn and target
-            top: 50,
-            bottom: 240,
-            left: 50,
-            right: 590
-        },
-        fireworkSpeed : 2,
-        fireworkAcceleration : 1.05,
-        particleFriction : .95,
-        particleGravity : 1.5
-    });
-    firework.start();
+function startFireworks(action) {
+    console.log(action)
+    if (action == true) {
+        firework.start();
+        fireworkElement.style.removeProperty('display');
+    }
+    if (action == false) {
+        fireworkElement.style.setProperty('display', 'none');
+        firework.stop();
+        console.log(fireworkElement)
+    }
+
 }
+
+let firework = JS_FIREWORKS.Fireworks({
+    id: 'fireworks-canvas',
+    hue: 120,
+    particleCount: 50,
+    delay: 0,
+    minDelay: 20,
+    maxDelay: 40,
+    boundaries: { // of respawn and target
+        top: 50,
+        bottom: 240,
+        left: 50,
+        right: 590
+    },
+    fireworkSpeed: 2,
+    fireworkAcceleration: 1.05,
+    particleFriction: .95,
+    particleGravity: 1.5
+});
