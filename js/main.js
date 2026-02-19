@@ -80,9 +80,11 @@ function showCorrectAnswer(lvl, IMG, textContent, answerSrtatus) {
     if (answerSrtatus == true) {
         soundAvation.play(); //Проигрываем звук
         startFireworks(true); //Запускаем фейрверк
+        videoFail.classList.add('visible');
+        modal__img.style.height = "60%";
     } else {
         startFireworks(false); //Запускаем фейрверк
-        videoFail.classList.toggle('visible');
+        videoFail.classList.remove('visible');
         modal__img.style.height = "20%";
         videoFail.play();
     }
