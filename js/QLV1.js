@@ -215,7 +215,6 @@ const arrColletion = [
         questions__answer1: "Лицемерие",
         questions__answer2: "Легкомыслие",
         questions__answerCorrect: "Жертвенность",
-        questions__img: ".webp",
         questions__nonte: "Жертвенность Сони Мармеладовой",
     },
     {
@@ -225,7 +224,6 @@ const arrColletion = [
         questions__answer1: "Гончаров И.А. «Обломов»",
         questions__answer2: "Островский Н.А. «Гроза»",
         questions__answerCorrect: "Достоевский Ф.М. «Преступление и наказание»",
-        questions__img: ".webp",
         questions__nonte: "Достоевский Ф.М. «Преступление и наказание»",
     },
     {
@@ -235,7 +233,6 @@ const arrColletion = [
         questions__answer1: "Лицемерие",
         questions__answer2: "Легкомыслие",
         questions__answerCorrect: "Жертвенность",
-        questions__img: ".webp",
         questions__nonte: "Жертвенность",
     },
     {
@@ -245,17 +242,15 @@ const arrColletion = [
         questions__answer1: "«Гроза»",
         questions__answer2: "«Обломов»",
         questions__answerCorrect: "«Крыжовник»",
-        questions__img: ".webp",
         questions__nonte: "«Крыжовник»",
     },
     {
         questions: 13,
         questions__db: 2,
         questions__text: "Теория Раскольникова - это",
-        questions__answer1: "разделение людей на разряды в соответствии их социальной принадлежности.",
-        questions__answer2: "строгое научное разделение людей на разряды ",
-        questions__answerCorrect: "разделение людей на  разряды: материал и собственно люди",
-        questions__img: ".webp",
+        questions__answer1: "Разделение людей на разряды в соответствии их социальной принадлежности.",
+        questions__answer2: "Строгое научное разделение людей на разряды ",
+        questions__answerCorrect: "Разделение людей на  разряды: материал и собственно люди",
         questions__nonte: "",
     },
     {
@@ -265,8 +260,7 @@ const arrColletion = [
         questions__answer1: "Катерина Кабанова",
         questions__answer2: "Наташа Ростова",
         questions__answerCorrect: "Соня Мармеладова",
-        questions__img: ".webp",
-        questions__nonte: "",
+        questions__nonte: "Соня Мармеладова (Софья Семёновна Мармеладова) — персонаж романа Фёдора Достоевского «Преступление и наказание». Появляется впервые в рассказе при знакомстве с Родионом Раскольниковым в распивочной",
     },
     {
         questions: 15,
@@ -275,8 +269,7 @@ const arrColletion = [
         questions__answer1: "«Обломов»",
         questions__answer2: "«Преступление и наказание»",
         questions__answerCorrect: "«Человек в футляре»",
-        questions__img: ".webp",
-        questions__nonte: "",
+        questions__nonte: "«Человек в футляре» — рассказ Антона Павловича Чехова, написанный в мае — июне 1898 года. Впервые был опубликован в журнале «Русская мысль» (1898 год, №7). Это первая часть цикла «Маленькая трилогия», в которую также входят новеллы «Крыжовник» и «О любви».",
     },
 
     // ТРЕТИЙ ВОПРОС=======================================================================================================================
