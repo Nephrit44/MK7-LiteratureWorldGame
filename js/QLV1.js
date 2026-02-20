@@ -6,8 +6,7 @@ const arrColletion = [
         questions__answer1: "Тургенев И.С.",
         questions__answer2: "Толстой Л.Н.",
         questions__answerCorrect: "Гончаров И.А.",
-        questions__img: "01_Goncharov.webp",
-        questions__nonte: "Гончаров Иван Александрович",
+        questions__nonte: "Иван Александрович Гончаров — русский писатель и литературный критик. Автор трёх романов — «Обломов», «Обрыв» и «Обыкновенная история».",
     },
     {
         questions: 2,
@@ -16,8 +15,7 @@ const arrColletion = [
         questions__answer1: "Тургенев И.С.",
         questions__answer2: "Некрасов Н.А.",
         questions__answerCorrect: "Островский А.Н.",
-        questions__img: "02_Ostrivsky.webp",
-        questions__nonte: "Островский Александр Николаевич",
+        questions__nonte: "Александр Николаевич Островский — русский драматург, творчество которого стало важнейшим этапом развития русского национального театра.",
     },
     {
         questions: 3,
@@ -26,7 +24,6 @@ const arrColletion = [
         questions__answer1: "Некрасов Н.А.",
         questions__answer2: "Гончаров И.А.",
         questions__answerCorrect: "Тургенев И.С.",
-        questions__img: "",
         questions__nonte: "Тургенев Иван Сергеевич и Полина Виардо",
     },
     {
@@ -36,8 +33,7 @@ const arrColletion = [
         questions__answer1: "Тютчев Ф.И.",
         questions__answer2: "Некрасов Н.А.",
         questions__answerCorrect: "Фет А.А.",
-        questions__img: "",
-        questions__nonte: "Фет Афанасий Афанасьевич",
+        questions__nonte: "Афанасий Афанасьевич Фет (первые 14 и последние 19 лет жизни официально носил фамилию Шеншин) — русский поэт-лирик и переводчик, прозаик, мемуарист, член-корреспондент Петербургской Академии Наук.",
     },
     {
         questions: 5,
@@ -46,8 +42,7 @@ const arrColletion = [
         questions__answer1: "Островский А.Н.",
         questions__answer2: "Толстой Л.Н.",
         questions__answerCorrect: "Салтыков-Щедрин М.Е.",
-        questions__img: "05_Shedrin.webp",
-        questions__nonte: "Фет Афанасий Афанасьевич",
+        questions__nonte: "Михаил Евграфович Салтыков-Щедрин (настоящая фамилия — Салтыков, псевдоним — Николай Щедрин) — русский писатель, один из наиболее известных сатириков XIX века, журналист, государственный деятель.",
     },
     {
         questions: 6,
@@ -56,8 +51,7 @@ const arrColletion = [
         questions__answer1: "Фет А.А.",
         questions__answer2: "Тютчев Ф.И.",
         questions__answerCorrect: "Некрасов Н.А.",
-        questions__img: "Nekrasov.webp",
-        questions__nonte: "Николай Алексеевич Некрасов",
+        questions__nonte: "Николай Алексеевич Некрасов — русский поэт, прозаик и публицист, классик русской литературы.",
     },
     {
         questions: 7,
@@ -66,8 +60,7 @@ const arrColletion = [
         questions__answer1: "Толстой Л.Н.",
         questions__answer2: "Тургенев И.С.",
         questions__answerCorrect: "Достоевский М.Ф.",
-        questions__img: ".webp",
-        questions__nonte: "",
+        questions__nonte: "Фёдор Михайлович Достоевский — русский писатель, мыслитель, философ и публицист.",
     },
     {
         questions: 8,
@@ -76,8 +69,7 @@ const arrColletion = [
         questions__answer1: "Спасское -Лутовиново",
         questions__answer2: "Лысые Горы",
         questions__answerCorrect: "Ясная Поляна",
-        questions__img: ".webp",
-        questions__nonte: "Ясная Поляна",
+        questions__nonte: "«Ясная Поляна» — музей-усадьба в Щёкинском районе Тульской области (в 14 км к юго-западу от Тулы).",
     },
     {
         questions: 9,
@@ -86,8 +78,7 @@ const arrColletion = [
         questions__answer1: "«Отцы и дети»",
         questions__answer2: "«Идиот»",
         questions__answerCorrect: "«Обыкновенная история»",
-        questions__img: ".webp",
-        questions__nonte: "Обыкновенная история",
+        questions__nonte: "«Обыкновенная история» — первый роман русского писателя Ивана Александровича Гончарова, опубликованный в 1847 году в журнале «Современник». Иногда его объединяют в неформальную трилогию с последующими романами «Обломов» и «Обрыв».",
     },
     {
         questions: 10,
@@ -96,7 +87,6 @@ const arrColletion = [
         questions__answer1: "Салтыков - Щедрин.",
         questions__answer2: "Щедрин",
         questions__answerCorrect: "Салтыков",
-        questions__img: ".webp",
         questions__nonte: "Салтыков",
     },
     {
@@ -106,8 +96,7 @@ const arrColletion = [
         questions__answer1: "Щедрин М.Е.",
         questions__answer2: "Тургенев И.С.",
         questions__answerCorrect: "Островский А.Н.",
-        questions__img: ".webp",
-        questions__nonte: "Островский Александр Николаевич",
+        questions__nonte: "Александр Николаевич Островский — русский драматург, творчество которого стало важнейшим этапом развития русского национального театра.",
     },
     {
         questions: 12,
@@ -116,8 +105,7 @@ const arrColletion = [
         questions__answer1: "Фет А.А.",
         questions__answer2: "Тютчев Ф.И.",
         questions__answerCorrect: "Некрасов Н.А.",
-        questions__img: ".webp",
-        questions__nonte: "Николай Алексеевич Некрасов",
+        questions__nonte: "Николай Алексеевич Некрасов — русский поэт, прозаик и публицист, классик русской литературы",
     },
     {
         questions: 13,
