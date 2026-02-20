@@ -179,7 +179,7 @@ const arrColletion = [
         questions__answer1: "Анна Сергеевна Одинцова",
         questions__answer2: "Ольга Сергеевна Ильинская",
         questions__answerCorrect: "Екатерина Петровна Кабанова",
-        questions__nonte: "Екатерина Петровна Кабанова",
+        questions__nonte: "Катерина Петровна Кабанова — главная героиня пьесы А. Н. Островского «Гроза» (1859).",
     },
     {
         questions: 6,
@@ -188,7 +188,7 @@ const arrColletion = [
         questions__answer1: "Илья Андреевич Ростов",
         questions__answer2: "Николай Андреевич Болконский",
         questions__answerCorrect: "Павел Петрович Кирсанов",
-        questions__nonte: "Павел Петрович Кирсанов",
+        questions__nonte: "Павел Петрович Кирсанов — персонаж романа И. С. Тургенева «Отцы и дети», главный противник Базарова, основной оппонент в его идейных спорах.",
     },
     {
         questions: 7,
@@ -197,7 +197,7 @@ const arrColletion = [
         questions__answer1: "Базаров Е.В.",
         questions__answer2: "Болконский Н.А.",
         questions__answerCorrect: "Раскольников Р.Р.",
-        questions__nonte: "Родион Романович Раскольников",
+        questions__nonte: "Родион Романович Раскольников — главный герой романа Ф.М. Достоевского «Преступление и наказание»",
     },
     {
         questions: 8,
@@ -206,7 +206,7 @@ const arrColletion = [
         questions__answer1: "Илья Ильич Обломов",
         questions__answer2: "Савел Прокофьевич Дикой",
         questions__answerCorrect: "Пьер Кириллович Безухов",
-        questions__nonte: "Пьер Кириллович Безухов",
+        questions__nonte: "Пётр Кириллович (Пьер) Безухов — центральный персонаж романа Льва Толстого «Война и мир»",
     },
     {
         questions: 9,
