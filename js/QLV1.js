@@ -114,8 +114,7 @@ const arrColletion = [
         questions__answer1: "Щедрин М.Е.",
         questions__answer2: "Достоевский Ф.М.",
         questions__answerCorrect: "Толстой Л.Н.",
-        questions__img: ".webp",
-        questions__nonte: "Лев Николаевич Толстой",
+        questions__nonte: "Лев Николаевич Толстой — русский писатель, публицист, философ и общественный деятель, граф",
     },
     {
         questions: 14,
@@ -124,8 +123,7 @@ const arrColletion = [
         questions__answer1: "Гончаров И.А.",
         questions__answer2: "Достоевский Ф.М.",
         questions__answerCorrect: "Чехов А.П.",
-        questions__img: ".webp",
-        questions__nonte: "Антон Павлович Чехов",
+        questions__nonte: "Антон Павлович Чехов — русский писатель, прозаик, драматург, публицист, врач, общественный деятель в сфере благотворительности. Классик мировой литературы. Почётный академик Императорской академии наук по разряду изящной словесности (1900–1902).",
     },
     {
         questions: 15,
@@ -134,8 +132,7 @@ const arrColletion = [
         questions__answer1: "Щедрин М.Е.",
         questions__answer2: "Некрасов Н.А.",
         questions__answerCorrect: "Достоевский Ф.М",
-        questions__img: ".webp",
-        questions__nonte: "Фёдор Михайлович Достоевский",
+        questions__nonte: "Фёдор Михайлович Достоевский — русский писатель, мыслитель, философ и публицист.",
     },
 
     // ВТОРОЙ ВОПРОС=======================================================================================================================
@@ -146,7 +143,6 @@ const arrColletion = [
         questions__answer1: "Евгений Васильевич Базаров",
         questions__answer2: "Павел Петрович Кирсанов",
         questions__answerCorrect: "Илья Ильич Обломов",
-        questions__img: ".webp",
         questions__nonte: "Илья Ильич Обломов",
     },
     {
