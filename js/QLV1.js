@@ -143,7 +143,7 @@ const arrColletion = [
         questions__answer1: "Евгений Васильевич Базаров",
         questions__answer2: "Павел Петрович Кирсанов",
         questions__answerCorrect: "Илья Ильич Обломов",
-        questions__nonte: "Илья Ильич Обломов",
+        questions__nonte: "Илья Ильич Обломов - главный герой романа И. А. Гончарова «Обломов». Это молодой дворянин тридцати с небольшим лет. От его фамилии произошло слово «обломовщина», ставшее нарицательным, и обозначающее застой.",
     },
     {
         questions: 2,
@@ -152,8 +152,7 @@ const arrColletion = [
         questions__answer1: "Родион Раскольников",
         questions__answer2: "Андрей Болконский",
         questions__answerCorrect: "Евгений Базаров",
-        questions__img: ".webp",
-        questions__nonte: "Евгений Базаров",
+        questions__nonte: "Евгений Васильевич Базаров — персонаж романа И.С. Тургенева «Отцы и дети», студент-нигилист",
     },
     {
         questions: 3,
@@ -162,8 +161,7 @@ const arrColletion = [
         questions__answer1: "Изображение преступления",
         questions__answer2: "Описание подготовки к убийству",
         questions__answerCorrect: "Описание нравственных последствий преступления",
-        questions__img: ".webp",
-        questions__nonte: "",
+        questions__nonte: "Описание нравственных последствий преступления",
     },
     {
         questions: 4,
@@ -172,8 +170,7 @@ const arrColletion = [
         questions__answer1: "Агафья Пшеницына   ",
         questions__answer2: "Ольга Сергеевна Ильинская",
         questions__answerCorrect: "Марфа Игнатьевна Кабанова.",
-        questions__img: ".webp",
-        questions__nonte: "Марфа Игнатьевна Кабанова.",
+        questions__nonte: "Марфа Игнатьевна Кабанова -  Является главой купеческого семейства Кабановых, вдова.",
     },
     {
         questions: 5,
@@ -182,7 +179,6 @@ const arrColletion = [
         questions__answer1: "Анна Сергеевна Одинцова",
         questions__answer2: "Ольга Сергеевна Ильинская",
         questions__answerCorrect: "Екатерина Петровна Кабанова",
-        questions__img: ".webp",
         questions__nonte: "Екатерина Петровна Кабанова",
     },
     {
@@ -192,7 +188,6 @@ const arrColletion = [
         questions__answer1: "Илья Андреевич Ростов",
         questions__answer2: "Николай Андреевич Болконский",
         questions__answerCorrect: "Павел Петрович Кирсанов",
-        questions__img: ".webp",
         questions__nonte: "Павел Петрович Кирсанов",
     },
     {
@@ -202,7 +197,6 @@ const arrColletion = [
         questions__answer1: "Базаров Е.В.",
         questions__answer2: "Болконский Н.А.",
         questions__answerCorrect: "Раскольников Р.Р.",
-        questions__img: ".webp",
         questions__nonte: "Родион Романович Раскольников",
     },
     {
@@ -212,7 +206,6 @@ const arrColletion = [
         questions__answer1: "Илья Ильич Обломов",
         questions__answer2: "Савел Прокофьевич Дикой",
         questions__answerCorrect: "Пьер Кириллович Безухов",
-        questions__img: ".webp",
         questions__nonte: "Пьер Кириллович Безухов",
     },
     {
